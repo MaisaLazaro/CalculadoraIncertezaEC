@@ -1,18 +1,32 @@
 import streamlit as st
-# Injetando CSS personalizado para definir o plano de fundo
-page_bg = """
-<style>
-    
-    .stApp {
-        background-image: url("https://scontent.faqa1-1.fna.fbcdn.net/v/t39.30808-6/304020462_633025508250639_2056439598122056532_n.png?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeH1Pj9KkA4eYYfmgkhnTxcko9Mzb0QQJF2j0zNvRBAkXT0iC_XVk-M1KfWj4Kpr6A8WtKVjdPsHkqGzQ5haJaC9&_nc_ohc=mSGwJQEuxFwQ7kNvgGKN_bl&_nc_ht=scontent.faqa1-1.fna&_nc_gid=A2YOc5SDtBD1-hPRDmfzZjN&oh=00_AYBlz-_jMAtc11e5dAsodQQKYMiMWAl6OVXkwmj7cW7wMQ&oe=66E1454A");
-    background-size: cover;
-    }
+import base64
 
-</style>
-"""
+# Função para carregar a imagem de fundo
 
-# Aplicando o CSS ao Streamlit
-st.markdown(page_bg, unsafe_allow_html=True)
+
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+# Função para setar a imagem como plano de fundo
+
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    background_image = f"""
+    <style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{bin_str}");
+        background-size: cover;
+    }}
+    </style>
+    """
+    st.markdown(background_image, unsafe_allow_html=True)
+
+
+# Chame a função com o caminho do arquivo de imagem
+set_background('static/imagemFundo.png')
 
 # Título do aplicativo
 st.markdown("<br><br>", unsafe_allow_html=True)
