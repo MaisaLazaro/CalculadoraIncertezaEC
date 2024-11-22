@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-# Função para carregar a imagem de fundo
+# Função carregar a imagem de fundo
 
 
 def get_base64(bin_file):
@@ -26,7 +26,8 @@ def set_background(png_file):
 
 
 # Chame a função com o caminho do arquivo de imagem
-set_background('static/imagemFundo.png')
+set_background(
+    r'C:\Users\Maisa\Documents\Python_projetos\static\imagemFundo7.png')
 
 # Título do aplicativo
 st.markdown("<br><br>", unsafe_allow_html=True)
@@ -57,35 +58,35 @@ if 'd2_ref' not in st.session_state:
     st.session_state.d2_ref = 1.0
 
 col1, col2 = st.columns(2)
-
 # Entrada do usuário - coluna 1
 with col1:
+
     st.subheader("Área de referência (MATA) ")
     C1_ref = st.number_input(
-        "Concentração de carbono MATA (Camada 00-20 cm):", value=st.session_state.C1_ref)
+        "Concentração de carbono (g. kg⁻¹)- Camada 00-20 cm:", value=st.session_state.C1_ref)
     C2_ref = st.number_input(
-        "Concentração de carbono MATA (Camada 20-40 cm):", value=st.session_state.C2_ref)
+        "Concentração de carbono (g. kg⁻¹)- Camada 20-40 cm:", value=st.session_state.C2_ref)
     C3_ref = st.number_input(
-        "Concentração de carbono MATA (Camada 40-60 cm):", value=st.session_state.C3_ref)
+        "Concentração de carbono (g. kg⁻¹)- Camada 40-60 cm:", value=st.session_state.C3_ref)
     d1_ref = st.number_input(
-        "Densidade da primeira camada MATA (00-20 cm):", value=st.session_state.d1_ref)
+        "Densidade MATA (g.cm⁻³)- Camada 00-20 cm:", value=st.session_state.d1_ref)
     d2_ref = st.number_input(
-        "Densidade da segunda camada MATA (20-40 cm):", value=st.session_state.d2_ref)
+        "Densidade MATA (g.cm⁻³)- Camada 20-40 cm:", value=st.session_state.d2_ref)
 
 
 # Entrada do usuário - coluna 2
 with col2:
-    st.subheader("Área")
+    st.subheader("Área Produtiva")
     C1 = st.number_input(
-        "Concentração de carbono (Camada 00-20 cm):", value=st.session_state.C1)
+        "Concentração de carbono (g.kg⁻¹)- Camada 00-20 cm:", value=st.session_state.C1)
     C2 = st.number_input(
-        "Concentração de carbono (Camada 20-40 cm):", value=st.session_state.C2)
+        "Concentração de carbono (g.kg⁻¹)- Camada 20-40 cm:", value=st.session_state.C2)
     C3 = st.number_input(
-        "Concentração de carbono (Camada 40-60 cm):", value=st.session_state.C3)
+        "Concentração de carbono (g.kg⁻¹)- Camada 40-60 cm:", value=st.session_state.C3)
     d1 = st.number_input(
-        "Densidade da primeira camada (00-20 cm):", value=st.session_state.d1)
+        "Densidade (g.cm⁻³)- Camada 00-20 cm:", value=st.session_state.d1)
     d2 = st.number_input(
-        "Densidade da segunda camada (20-40 cm):", value=st.session_state.d2)
+        "Densidade (g.cm⁻³)- Camada (20-40 cm:", value=st.session_state.d2)
 
 # Funções para cálculos
 
