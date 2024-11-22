@@ -1,17 +1,13 @@
 import streamlit as st
 import base64
 
-# Função para carregar a imagem de fundo
-
-
+# Plano de fundo
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
 # Função para setar a imagem como plano de fundo
-
-
 def set_background(png_file):
     bin_str = get_base64(png_file)
     background_image = f"""
@@ -24,15 +20,13 @@ def set_background(png_file):
     """
     st.markdown(background_image, unsafe_allow_html=True)
 
-
-# Chame a função com o caminho do arquivo de imagem
-set_background('static/imagemFundo.png')
+set_background('static/imagemFundo2.png')
 
 # Título do aplicativo
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: green; '>Calculadora de Estoque de Carbono e Incerteza</h1>", unsafe_allow_html=True)
 
-# Inicializando o estado da sessão para os dados da "Área"
+# Inicializando sessão para os dados da "Área"
 if 'C1' not in st.session_state:
     st.session_state.C1 = 1.0
 if 'C2' not in st.session_state:
@@ -44,7 +38,7 @@ if 'd1' not in st.session_state:
 if 'd2' not in st.session_state:
     st.session_state.d2 = 1.0
 
-# Inicializando o estado da sessão para os dados da MATA
+# Inicializando sessão para os dados da MATA
 if 'C1_ref' not in st.session_state:
     st.session_state.C1_ref = 1.0
 if 'C2_ref' not in st.session_state:
@@ -62,33 +56,32 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("Área de referência (MATA) ")
     C1_ref = st.number_input(
-        "Concentração de carbono MATA (Camada 00-20 cm):", value=st.session_state.C1_ref)
+        "Concentração de carbono MATA (g.kg⁻¹)- Camada 00-20 cm:", value=st.session_state.C1_ref)
     C2_ref = st.number_input(
-        "Concentração de carbono MATA (Camada 20-40 cm):", value=st.session_state.C2_ref)
+        "Concentração de carbono MATA (g.kg⁻¹)- Camada 20-40 cm:", value=st.session_state.C2_ref)
     C3_ref = st.number_input(
-        "Concentração de carbono MATA (Camada 40-60 cm):", value=st.session_state.C3_ref)
+        "Concentração de carbono MATA (g.kg⁻¹)- Camada 40-60 cm:", value=st.session_state.C3_ref)
     d1_ref = st.number_input(
-        "Densidade da primeira camada MATA (00-20 cm):", value=st.session_state.d1_ref)
+        "Densidade da primeira camada MATA (g.)- Camada 00-20 cm:", value=st.session_state.d1_ref)
     d2_ref = st.number_input(
-        "Densidade da segunda camada MATA (20-40 cm):", value=st.session_state.d2_ref)
+        "Densidade da segunda camada MATA g.kg⁻¹(20-40 cm:", value=st.session_state.d2_ref)
 
 
 # Entrada do usuário - coluna 2
 with col2:
     st.subheader("Área")
     C1 = st.number_input(
-        "Concentração de carbono (Camada 00-20 cm):", value=st.session_state.C1)
+        "Concentração de carbono (g.kg⁻¹)- Camada 00-20 cm:", value=st.session_state.C1)
     C2 = st.number_input(
-        "Concentração de carbono (Camada 20-40 cm):", value=st.session_state.C2)
+        "Concentração de carbono (g.kg⁻¹)- Camada 20-40 cm:", value=st.session_state.C2)
     C3 = st.number_input(
-        "Concentração de carbono (Camada 40-60 cm):", value=st.session_state.C3)
+        "Concentração de carbono (g.kg⁻¹)- Camada 40-60 cm:", value=st.session_state.C3)
     d1 = st.number_input(
         "Densidade da primeira camada (00-20 cm):", value=st.session_state.d1)
     d2 = st.number_input(
         "Densidade da segunda camada (20-40 cm):", value=st.session_state.d2)
 
 # Funções para cálculos
-
 
 def declaracao_Variavel():
     u_d = 0.094
