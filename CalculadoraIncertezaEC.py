@@ -27,7 +27,7 @@ def set_background(png_file):
 
 # Chame a função com o caminho do arquivo de imagem
 set_background(
-    r'C:\Users\Maisa\Documents\Python_projetos\static\imagemFundo7.png')
+    r'static\imagemFundo7.png')
 
 # Título do aplicativo
 st.markdown("<br><br>", unsafe_allow_html=True)
