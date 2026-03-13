@@ -12,13 +12,13 @@ Funcionalidades:
 -Versionamento do projeto com Git/GitHub
 
 Tecnologias utilizadas:
--Python
--Streamlit
--HTML
--CSS
--Git
--GitHub
--Streamlit Cloud (deploy)
+Python;
+Streamlit;
+HTML;
+CSS;
+Git;
+GitHub;
+Streamlit Cloud (deploy).
 
 Metodologia:
 O desenvolvimento do projeto seguiu a abordagem de MVP (Minimum Viable Product), permitindo a construção de uma solução funcional em ciclos curtos de desenvolvimento e validação.
