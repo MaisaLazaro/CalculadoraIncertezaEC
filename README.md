@@ -4,12 +4,12 @@ Aplicação web desenvolvida em Python para cálculo do estoque de carbono no so
 A aplicação pode ser acessada online: https://calculadora-incertezaec.streamlit.app/
 
 Funcionalidades:
--Cálculo automático do estoque de carbono no solo
--Cálculo da incerteza associada às medições
--Interface web interativa e intuitiva
--Automação de cálculos que antes eram realizados em planilhas
--Dashboard acessível via navegador
--Versionamento do projeto com Git/GitHub
+Cálculo automático do estoque de carbono no solo;
+Cálculo da incerteza associada às medições;
+Interface web interativa e intuitiva;
+Automação de cálculos que antes eram realizados em planilhas;
+Dashboard acessível via navegador;
+Versionamento do projeto com Git/GitHub.
 
 Tecnologias utilizadas:
 Python;
@@ -24,13 +24,13 @@ Metodologia:
 O desenvolvimento do projeto seguiu a abordagem de MVP (Minimum Viable Product), permitindo a construção de uma solução funcional em ciclos curtos de desenvolvimento e validação.
 
 As principais etapas foram:
--Levantamento dos requisitos e parâmetros de cálculo
--Modelagem matemática do cálculo do estoque de carbono e propagação de incertezas
--Implementação das funções em Python
--Desenvolvimento da interface web com Streamlit
--Versionamento do código no GitHub
--Deploy da aplicação utilizando Streamlit Cloud
--Testes e validação com dados reais
+Levantamento dos requisitos e parâmetros de cálculo;
+Modelagem matemática do cálculo do estoque de carbono e propagação de incertezas;
+Implementação das funções em Python;
+Desenvolvimento da interface web com Streamlit;
+Versionamento do código no GitHub;
+Deploy da aplicação utilizando Streamlit Cloud;
+Testes e validação com dados reais.
 
 Contexto do projeto:
 Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC) do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de transformar uma planilha de cálculo em uma aplicação web acessível e automatizada.
