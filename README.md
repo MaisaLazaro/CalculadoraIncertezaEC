@@ -44,6 +44,3 @@ Possíveis melhorias futuras:
 
 Autora:
 Maisa Cristina Lázaro Dallilo
-Doutora em Química Analítica
-MBA em Data Science and Analytics
-Graduanda em Análise e Desenvolvimento de Sistemas
